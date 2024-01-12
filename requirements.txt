@@ -1,0 +1,12 @@
+fsspec==2023.9.2
+huggingface-hub==0.20.2
+tokenizers==0.15.0
+transformers==4.36.2
+# 模型量化相关依赖
+bitsandbytes==0.42.0
+accelerate==0.25.0
+peft==0.7.1
+rouge==1.0.1
+gekko==1.0.6
+auto-gptq==0.6.0
+optimum==1.16.1
