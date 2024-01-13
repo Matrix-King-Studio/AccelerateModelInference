@@ -3,5 +3,4 @@ lm_eval --model hf \
     --tasks arc_challenge,hellaswag,piqa \
     --device cpu \
     --batch_size auto \
-    --output_path ./lm-eval-output \
-    --log_samples
+    --output_path ./lm-eval-output
