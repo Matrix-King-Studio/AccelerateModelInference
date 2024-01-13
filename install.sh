@@ -15,13 +15,23 @@ current_path=$(pwd)
 
 # 判断当前目录下是否有 lm-evaluation-harness 文件夹，如果没有的话，执行git clone
 if [ ! -d "lm-evaluation-harness" ]; then
-  git clone https://github.com/EleutherAI/lm-evaluation-harness && cd lm-evaluation-harness && pip install -e .
+  echo "安装 lm-eval"
+  git clone https://github.com/EleutherAI/lm-evaluation-harness.git && cd lm-evaluation-harness && pip install -e .
+fi
+
+cd "$current_path"
+
+# 判断当前目录下是否有 optimum-benchmark 文件夹，如果没有的话，执行git clone
+if [ ! -d "optimum-benchmark" ]; then
+  echo "安装 optimum-benchmark"
+  git clone https://github.com/huggingface/optimum-benchmark.git && cd optimum-benchmark && pip install -e .
 fi
 
 cd "$current_path"
 
 # 判断当前目录下是否有 llama.cpp 文件夹，如果没有的话，执行git clone
 if [ ! -d "llama.cpp" ]; then
+  echo "安装 llama.cpp"
   git clone https://github.com/ggerganov/llama.cpp && cd llama.cpp && make
 fi
 
@@ -29,6 +39,7 @@ cd "$current_path"
 
 # 判断/tmp目录下是否已经存在Qwen-7B文件夹，如果不存在，则执行git clone下载模型
 if [ ! -d "/tmp/Qwen-7B" ]; then
+  echo "下载 Qwen-7B 模型"
   cd /tmp/ && git clone https://huggingface.co/Qwen/Qwen-7B
 fi
 
