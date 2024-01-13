@@ -16,7 +16,9 @@ backend:
 
 hub_kwargs:
   trust_remote_code: true
-  
+  use_cache: true
+  low_cpu_mem_usage: true
+
 benchmark:
   memory: true
   warmup_runs: 10
