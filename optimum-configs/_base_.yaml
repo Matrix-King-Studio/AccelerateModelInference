@@ -7,8 +7,8 @@ defaults:
   - override hydra/job_logging: colorlog # colorful logging
   - override hydra/hydra_logging: colorlog # colorful logging
 
-experiment_name: Wenzhong-GPT2-experiment
-model: Wenzhong-GPT2-model
+experiment_name: Qwen-7B-experiment
+model: Qwen-7B
 device: cpu
 
 backend:
@@ -33,4 +33,4 @@ hydra:
   sweeper:
     params:
       benchmark.input_shapes.batch_size: 1
-      model: IDEA-CCNL/Wenzhong-GPT2-110M
+      model: /tmp/Qwen-7B/
