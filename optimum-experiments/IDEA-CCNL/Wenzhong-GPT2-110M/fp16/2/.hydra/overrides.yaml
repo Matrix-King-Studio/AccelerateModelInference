@@ -1,0 +1,2 @@
+- benchmark.input_shapes.batch_size=2
+- model=IDEA-CCNL/Wenzhong-GPT2-110M
