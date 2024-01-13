@@ -33,4 +33,4 @@ hydra:
   sweeper:
     params:
       benchmark.input_shapes.batch_size: 1,2,4,8
-      model: /tmp/Qwen-7B/
+      model: Qwen/Qwen-7B
