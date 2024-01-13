@@ -32,5 +32,5 @@ hydra:
     chdir: true
   sweeper:
     params:
-      benchmark.input_shapes.batch_size: 1,2,4,8,16,32,64
+      benchmark.input_shapes.batch_size: 1,2,4,8
       model: /tmp/Qwen-7B/
