@@ -27,3 +27,9 @@ fi
 if ! pip list | grep 'optimum-benchmark'; then
   cd optimum-benchmark && pip install -e . && cd ..
 fi
+
+# 判断当前目录下是否有 llama.cpp 文件夹，如果没有的话，执行git clone
+if [ ! -d "llama.cpp" ]; then
+  git clone https://github.com/ggerganov/llama.cpp && cd llama.cpp && make
+  cd /tmp/ && git clone https://huggingface.co/Qwen/Qwen-7B
+fi
