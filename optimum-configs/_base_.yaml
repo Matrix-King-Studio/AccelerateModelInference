@@ -13,7 +13,6 @@ device: cpu
 
 backend:
   no_weights: false
-  continuous_isolation: false
 
 benchmark:
   memory: true
