@@ -18,7 +18,6 @@ hub_kwargs:
   trust_remote_code: true
   use_cache: true
   low_cpu_mem_usage: true
-  gradient_checkpointing: true
 
 benchmark:
   memory: true
