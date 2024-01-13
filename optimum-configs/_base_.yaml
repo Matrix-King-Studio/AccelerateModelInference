@@ -14,6 +14,9 @@ device: cpu
 backend:
   no_weights: false
 
+hub_kwargs:
+  trust_remote_code: true
+  
 benchmark:
   memory: true
   warmup_runs: 10
