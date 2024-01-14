@@ -1,0 +1,2 @@
+- benchmark.input_shapes.batch_size=4
+- model=Qwen/Qwen-7B

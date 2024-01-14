@@ -1,0 +1,86 @@
+launcher:
+  name: process
+  _target_: optimum_benchmark.launchers.process.launcher.ProcessLauncher
+  device_isolation: false
+  start_method: spawn
+backend:
+  name: pytorch
+  version: 2.0.1+cu118
+  _target_: optimum_benchmark.backends.pytorch.backend.PyTorchBackend
+  seed: 42
+  inter_op_num_threads: null
+  intra_op_num_threads: null
+  delete_cache: false
+  no_weights: false
+  device_map: null
+  torch_dtype: null
+  eval_mode: true
+  disable_grad: true
+  amp_autocast: false
+  amp_dtype: null
+  torch_compile: false
+  torch_compile_config: {}
+  to_bettertransformer: false
+  use_flash_attention_2: false
+  quantization_scheme: null
+  quantization_config: {}
+  data_parallel: false
+  deepspeed_inference: false
+  deepspeed_inference_config: {}
+  peft_strategy: null
+  peft_config: {}
+benchmark:
+  name: inference
+  _target_: optimum_benchmark.benchmarks.inference.benchmark.InferenceBenchmark
+  duration: 10
+  warmup_runs: 10
+  memory: true
+  energy: false
+  input_shapes:
+    batch_size: 1
+    sequence_length: 256
+    num_choices: 1
+    feature_size: 80
+    nb_max_frames: 3000
+    audio_sequence_length: 16000
+  new_tokens: 512
+  can_diffuse: false
+  can_generate: true
+  forward_kwargs: {}
+  generate_kwargs:
+    num_return_sequences: 1
+    max_new_tokens: 512
+    min_new_tokens: 512
+    do_sample: false
+    use_cache: true
+    pad_token_id: 0
+    temperature: 1.0
+    num_beams: 1
+experiment_name: fp16
+device: cpu
+model: Qwen/Qwen-7B
+task: text-generation
+hub_kwargs:
+  revision: main
+  cache_dir: null
+  force_download: false
+  local_files_only: false
+  trust_remote_code: true
+  use_cache: true
+  low_cpu_mem_usage: true
+environment:
+  optimum_version: 1.16.1
+  optimum_commit: null
+  transformers_version: 4.36.2
+  transformers_commit: null
+  accelerate_version: 0.25.0
+  accelerate_commit: null
+  diffusers_version: null
+  diffusers_commit: null
+  python_version: 3.10.12
+  system: Linux
+  cpu: ' Intel(R) Xeon(R) Gold 6142 CPU @ 2.60GHz'
+  cpu_count: 6
+  cpu_ram_mb: 59704
+  gpus:
+  - NVIDIA GeForce RTX 3090

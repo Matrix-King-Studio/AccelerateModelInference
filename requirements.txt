@@ -5,6 +5,7 @@ transformers==4.36.2
 tiktoken==0.5.2
 einops==0.7.0
 transformers_stream_generator==0.0.4
+llama-cpp-python
 
 # 模型量化相关依赖
 bitsandbytes==0.42.0
