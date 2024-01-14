@@ -36,11 +36,3 @@ if [ ! -d "llama.cpp" ]; then
 fi
 
 cd "$current_path"
-
-# 判断/tmp目录下是否已经存在Qwen-7B文件夹，如果不存在，则执行git clone下载模型
-if [ ! -d "/tmp/Qwen-7B" ]; then
-  echo "下载 Qwen-7B 模型"
-  cd /tmp/ && git clone https://huggingface.co/Qwen/Qwen-7B
-fi
-
-cd "$current_path"
