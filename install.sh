@@ -21,11 +21,11 @@ current_path=$(pwd)
 
 cd "$current_path"
 
-# 判断当前目录下是否有 optimum-benchmark 文件夹，如果没有的话，执行git clone
-# if [ ! -d "optimum-benchmark" ]; then
-#   echo "安装 optimum-benchmark"
-#   git clone https://github.com/huggingface/optimum-benchmark.git && cd optimum-benchmark && pip install -e .
-# fi
+判断当前目录下是否有 optimum-benchmark 文件夹，如果没有的话，执行git clone
+if [ ! -d "optimum-benchmark" ]; then
+  echo "安装 optimum-benchmark"
+  git clone https://github.com/huggingface/optimum-benchmark.git && cd optimum-benchmark && pip install -e .
+fi
 
 cd "$current_path"
 
