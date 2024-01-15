@@ -5,7 +5,7 @@ current_path=$(pwd)
 if [ ! -d "/tmp/Qwen-7B-gguf/" ]; then
   echo "下载 Qwen-7B-gguf 模型"
   cd /tmp/ && git clone https://huggingface.co/MatrixStudio/Qwen-7B-gguf
-  cd "$current_path/llama.cpp" && ./main -m /tmp/Qwen-7B-gguf/qwen7b-q4_0.gguf -p "Human: 请给我讲一个笑话。Assistant:" -n 512 --temp 1
+  cd "$current_path/llama.cpp" && ./main -m /tmp/Qwen-7B-gguf/qwen7b-q4_0.gguf -p "Human: 请给我讲一个笑话。Assistant:" -n 32 --temp 1
 fi
 
 cd "$current_path"

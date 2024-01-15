@@ -18,4 +18,5 @@ auto-gptq==0.6.0
 optimum==1.16.1
 
 # 模型评估相关依赖
-# optimum-benchmark[text-generation-inference]
+optimum-benchmark[text-generation-inference]
+lm-eval

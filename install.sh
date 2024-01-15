@@ -14,18 +14,18 @@ pip install -r requirements.txt
 current_path=$(pwd)
 
 # 判断当前目录下是否有 lm-evaluation-harness 文件夹，如果没有的话，执行git clone
-if [ ! -d "lm-evaluation-harness" ]; then
-  echo "安装 lm-eval"
-  git clone https://github.com/EleutherAI/lm-evaluation-harness.git && cd lm-evaluation-harness && pip install -e .
-fi
+# if [ ! -d "lm-evaluation-harness" ]; then
+#   echo "安装 lm-eval"
+#   git clone https://github.com/EleutherAI/lm-evaluation-harness.git && cd lm-evaluation-harness && pip install -e .
+# fi
 
 cd "$current_path"
 
 # 判断当前目录下是否有 optimum-benchmark 文件夹，如果没有的话，执行git clone
-if [ ! -d "optimum-benchmark" ]; then
-  echo "安装 optimum-benchmark"
-  git clone https://github.com/huggingface/optimum-benchmark.git && cd optimum-benchmark && pip install -e .
-fi
+# if [ ! -d "optimum-benchmark" ]; then
+#   echo "安装 optimum-benchmark"
+#   git clone https://github.com/huggingface/optimum-benchmark.git && cd optimum-benchmark && pip install -e .
+# fi
 
 cd "$current_path"
 
