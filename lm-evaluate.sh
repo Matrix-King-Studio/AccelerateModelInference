@@ -1,3 +1,5 @@
+# lm_eval --model hf --model_args pretrained=IDEA-CCNL/Wenzhong-GPT2-110M --tasks arc_challenge,hellaswag,piqa --device cuda:0 --batch_size 8
+
 # lm_eval --model hf \
 #     --model_args pretrained=Qwen/Qwen-7B,trust_remote_code=True,load_in_8bit=True \
 #     --tasks arc_challenge,hellaswag,piqa \
